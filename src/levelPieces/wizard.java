@@ -5,7 +5,7 @@ package levelPieces;
 import gameEngine.Drawable;
 import gameEngine.InteractionResult;
 
-public class wizard extends GamePiece implements Moveable{
+public class wizard extends GamePiece {
     
     public wizard(int location) {
         super('W', "wizard", location);
