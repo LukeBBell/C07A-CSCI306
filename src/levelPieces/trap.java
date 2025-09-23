@@ -10,7 +10,7 @@ import gameEngine.InteractionResult;
  * trap game piece that extends GamePiece.
  * When the player interacts with a trap, they take damage.
  */
-public class trap extends GamePiece {
+public class trap extends GamePiece{
     
     /**
      * Constructor for Goblin

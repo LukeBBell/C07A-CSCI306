@@ -5,12 +5,13 @@ package levelPieces;
 import gameEngine.Drawable;
 import gameEngine.Moveable;
 import gameEngine.InteractionResult;
+import javax.management.modelmbean.ModelMBean;
 
 /**
  * Goblin game piece that extends GamePiece.
  * When the player interacts with a goblin, they take damage.
  */
-public class Goblin extends GamePiece {
+public class Goblin extends GamePiece implements Moveable {
     
     /**
      * Constructor for Goblin

@@ -5,7 +5,7 @@ package levelPieces;
 import gameEngine.Drawable;
 import gameEngine.InteractionResult;
 
-public class chest extends GamePiece {
+public class chest extends GamePiece{
     
     public chest(int location) {
         super('X', "bomb", location);
