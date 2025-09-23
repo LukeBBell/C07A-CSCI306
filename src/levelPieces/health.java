@@ -1,1 +1,0 @@
-//interact when on the same space
