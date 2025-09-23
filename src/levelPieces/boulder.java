@@ -8,8 +8,6 @@ import gameEngine.InteractionResult;
 public class boulder extends GamePiece implements Moveable {
     //move the boulder to the right one every turn
 
-    //move the boulder to the right one every turn
-
     
     public boulder(int location) {
         super('O', "boulder", location);
@@ -22,5 +20,12 @@ public class boulder extends GamePiece implements Moveable {
             return InteractionResult.KILL;
         }
         return InteractionResult.NONE;
+    }
+
+
+    public void move(Drawable[] gameBoard, int playerLocation) {
+
+        this.setLocation(this.getLocation() + 1);
+        gameBoard[this.getLocation() - 1] = null;
     }
 }
