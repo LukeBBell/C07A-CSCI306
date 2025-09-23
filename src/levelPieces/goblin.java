@@ -31,7 +31,7 @@ public class Goblin extends GamePiece {
     @Override
     public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
         // Check if player is at the same location as this goblin
-        if (playerLocation == this.getLocation()) {
+        if (playerLocation == (this.getLocation() + 1) || playerLocation == (this.getLocation() - 1) ) {
             return InteractionResult.HIT;
         }
         return InteractionResult.NONE;
