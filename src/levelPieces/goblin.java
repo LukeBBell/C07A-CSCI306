@@ -3,6 +3,7 @@
 package levelPieces;
 
 import gameEngine.Drawable;
+import gameEngine.Moveable;
 import gameEngine.InteractionResult;
 
 /**
@@ -35,5 +36,16 @@ public class Goblin extends GamePiece {
             return InteractionResult.HIT;
         }
         return InteractionResult.NONE;
+    }
+
+    @Override
+    public void move(Drawable[] gameBoard, int playerLocation) {
+        //goblin moves randomly one space left or right each turn
+        int direction = (int)(Math.random() * 2); // 0 or 1
+        if (direction == 0 && this.getLocation() > 0) {
+            this.setLocation(this.getLocation() - 1); // move left
+        } else if (direction == 1 && this.getLocation() < gameBoard.length - 1) {
+            this.setLocation(this.getLocation() + 1); // move right
+        }
     }
 }
