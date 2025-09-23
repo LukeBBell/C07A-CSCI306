@@ -8,7 +8,7 @@ import gameEngine.InteractionResult;
 public class wizard extends GamePiece {
     
     public wizard(int location) {
-        super('D', "door", location);
+        super('W', "wizard", location);
     }
 
  @Override

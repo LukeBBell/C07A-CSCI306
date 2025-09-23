@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-// interact when on the same space
-=======
 //do damage when on the same space
 
 
@@ -41,4 +38,3 @@ public class trap extends GamePiece {
         return InteractionResult.NONE;
     }
 }
->>>>>>> 8c513fbad722b84dc2597fc9b582f597cf6d5664
