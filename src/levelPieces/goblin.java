@@ -8,8 +8,6 @@ import gameEngine.InteractionResult;
 /**
  * Goblin game piece that extends GamePiece.
  * When the player interacts with a goblin, they take damage.
- * 
- * @author [Your Name]
  */
 public class Goblin extends GamePiece {
     
