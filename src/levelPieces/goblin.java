@@ -10,7 +10,7 @@ import gameEngine.InteractionResult;
  * Goblin game piece that extends GamePiece.
  * When the player interacts with a goblin, they take damage.
  */
-public class Goblin extends GamePiece {
+public class Goblin extends GamePiece implements Moveable {
     
     /**
      * Constructor for Goblin
@@ -43,9 +43,13 @@ public class Goblin extends GamePiece {
         //goblin moves randomly one space left or right each turn
         int direction = (int)(Math.random() * 2); // 0 or 1
         if (direction == 0 && this.getLocation() > 0) {
+            if (gameBoard[this.getLocation() - 1] == null) {
             this.setLocation(this.getLocation() - 1); // move left
+            }
         } else if (direction == 1 && this.getLocation() < gameBoard.length - 1) {
-            this.setLocation(this.getLocation() + 1); // move right
+            if (gameBoard[this.getLocation() + 1] == null) {
+            this.setLocation(this.getLocation() + 1); // move left
+            }
         }
     }
 }
