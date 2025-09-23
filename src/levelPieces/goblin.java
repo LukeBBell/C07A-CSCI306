@@ -5,6 +5,7 @@ package levelPieces;
 import gameEngine.Drawable;
 import gameEngine.Moveable;
 import gameEngine.InteractionResult;
+import javax.management.modelmbean.ModelMBean;
 
 /**
  * Goblin game piece that extends GamePiece.
