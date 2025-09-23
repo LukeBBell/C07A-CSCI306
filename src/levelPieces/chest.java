@@ -15,7 +15,7 @@ public class chest extends GamePiece {
     public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
 //checks if player landed on the chest 
         if (playerLocation == this.getLocation()) {
-            return InteractionResult.ADVANCE;
+            return InteractionResult.GET_POINT;
         }
         return InteractionResult.NONE;
     }

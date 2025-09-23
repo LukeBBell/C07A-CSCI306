@@ -5,17 +5,17 @@ package levelPieces;
 import gameEngine.Drawable;
 import gameEngine.InteractionResult;
 
-public class bomb extends GamePiece {
+public class Door extends GamePiece {
     
-    public bomb(int location) {
-        super('B', "bomb", location);
+    public Door(int location) {
+        super('D', "door", location);
     }
 
     @Override
     public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-//checks if player landed on the bomb
-        if (playerLocation == this.getLocation()) {
-            return InteractionResult.KILL;
+//checks if player is one space before the door
+        if (playerLocation == (this.getLocation()-1)) {
+            return InteractionResult.ADVANCE;
         }
         return InteractionResult.NONE;
     }
