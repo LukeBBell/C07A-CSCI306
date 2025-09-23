@@ -46,10 +46,14 @@ public class Goblin extends GamePiece implements Moveable {
         if (direction == 0 && this.getLocation() > 0) {
             if (gameBoard[this.getLocation() - 1] == null) {
             this.setLocation(this.getLocation() - 1); // move left
+            gameBoard[this.getLocation() + 1] = null;
+            gameBoard[this.getLocation()] = this;
             }
         } else if (direction == 1 && this.getLocation() < gameBoard.length - 1) {
             if (gameBoard[this.getLocation() + 1] == null) {
             this.setLocation(this.getLocation() + 1); // move left
+            gameBoard[this.getLocation() - 1] = null;
+            gameBoard[this.getLocation()] = this;
             }
         }
     }
