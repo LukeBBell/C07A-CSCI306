@@ -1,4 +1,4 @@
-//if you land on 
+//if you land on the chest then the GET_POINT is increased
 
 package levelPieces;
 

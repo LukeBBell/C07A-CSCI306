@@ -1,4 +1,6 @@
-//
+//Boulder moves right one space every turn and kills you if it lands on same space as you
+// we'll put a chest near boulder so it is a challenge to attempt to get near the boudler
+
 
 package levelPieces;
 
@@ -16,7 +18,7 @@ public class boulder extends GamePiece implements Moveable {
 
     @Override
     public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-//checks if player landed on the bomb
+
         if (playerLocation == this.getLocation()) {
             return InteractionResult.KILL;
         }

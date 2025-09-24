@@ -1,4 +1,4 @@
-//if you land on this space it kills immediately
+//Piece placed at the end of the level which advances player to next level
 
 package levelPieces;
 
