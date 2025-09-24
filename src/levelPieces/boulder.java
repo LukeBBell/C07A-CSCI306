@@ -4,6 +4,7 @@ package levelPieces;
 
 import gameEngine.Drawable;
 import gameEngine.InteractionResult;
+import gameEngine.Moveable;
 
 public class boulder extends GamePiece implements Moveable {
     //move the boulder to the right one every turn
