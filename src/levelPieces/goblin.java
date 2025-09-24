@@ -1,4 +1,5 @@
-//stab if one away
+//stab if one away, goblin is the pieces that moves randomly while boulder is the moving piece
+//that moves on a consistent path
 
 package levelPieces;
 
@@ -12,23 +13,12 @@ import gameEngine.Moveable;
  */
 public class goblin extends GamePiece implements Moveable {
     
-    /**
-     * Constructor for Goblin
-     * 
-     * @param location initial location of the goblin on the board
-     */
+
     public goblin(int location) {
         super('G', "goblin", location);
     }
     
-    /**
-     * Handles interaction between player and goblin.
-     * When player is at the same location as goblin, player takes a hit.
-     * 
-     * @param gameBoard current state of the game board
-     * @param playerLocation current location of the player
-     * @return InteractionResult.HIT if player is at same location, NONE otherwise
-     */
+
     @Override
     public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
         // Check if player is at the same location as this goblin

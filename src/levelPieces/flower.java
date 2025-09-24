@@ -3,17 +3,10 @@
 package levelPieces;
 
 import gameEngine.Drawable;
-import gameEngine.GameEngine;
 import gameEngine.InteractionResult;
 
-/**
- *  This is an abstract class because it contains an abstract 
- *  method AND an instance variable
- * 
- * @author Mark Baldwin
- * @author Cyndi Rader
- *
- */
+//flower piece which does nothing when interaction called
+
 public class flower extends GamePiece {
     
     public flower(int location) {
