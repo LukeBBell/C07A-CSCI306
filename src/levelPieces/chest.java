@@ -8,7 +8,7 @@ import gameEngine.InteractionResult;
 public class chest extends GamePiece{
     
     public chest(int location) {
-        super('X', "bomb", location);
+        super('C', "chest", location);
     }
 
     @Override
