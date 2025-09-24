@@ -48,6 +48,42 @@ public class LevelSetup {
             movingPieces = new ArrayList<>();
             interactingPieces = new ArrayList<>();
             playerStartLoc = 5;
+
+            boulder blvl2 = new boulder(1);
+            movingPieces.add(blvl2);
+            interactingPieces.add(blvl2);
+            board[2] = blvl2;
+
+            flower f1lvl2 = new flower(3);
+            board[3] = f1lvl2;
+            chest clvl2 = new chest(1);
+            board[1] = clvl2;
+
+            trap t1lvl2 = new trap(7);
+            board[7] = t1lvl2;
+
+            goblin g1lvl2 = new goblin(9);
+            board[9] = g1lvl2;
+
+            flower f2lvl2 = new flower(11);
+            board[11] = f2lvl2;
+
+            trap t3lvl2 = new trap(12);
+            board[12] = t3lvl2;
+
+            trap t4lvl2 = new trap(14);
+            board[14] = t4lvl2;
+
+            wizard w1lvl2 = new wizard(17);
+            board[17] = w1lvl2;
+
+            chest c2lvl2 = new chest(19);
+            board[19] = c2lvl2;
+
+            Door dlvl2 = new Door(20);
+            board[20] = dlvl2;
+
+
         }
     }
 
