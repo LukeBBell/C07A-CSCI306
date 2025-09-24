@@ -13,7 +13,17 @@ public class LevelSetup {
 
     public void createLevel(int levelNumber) {
         // Implementation for setting up the level based on levelNumber
-        if 
+        if (levelNumber == 1) {
+            board = new Drawable[21];
+            movingPieces = new ArrayList<>();
+            interactingPieces = new ArrayList<>();
+            playerStartLoc = 10;
+        } else if (levelNumber == 2) {
+            board = new Drawable[21];
+            movingPieces = new ArrayList<>();
+            interactingPieces = new ArrayList<>();
+            playerStartLoc = 5;
+        }
     }
 
     public Drawable[] getBoard() {
