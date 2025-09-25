@@ -1,0 +1,24 @@
+In Luke and my code each of the characters meet each of the requirements:
+    Boulder: The boulder is one of the pieces that is able to move and it uses the algorithm of just moving one space at a time linearly as if it chasing the user down. It also is a piece that interacts with the player on the same space. Finally it utilizes the Kill interaction type which is one of the four
+    Chest: The chest is a piece that is stationary and has no moving algorithm included. It the second piece that interacts with the user when on the same space as it and utlizes the get point interaction which is one of the four
+    Door: The door is a stationary piece that only interacts with the player if the player is one before so it doesn't fall in the interaction category. It uses the advance interaction type which covers the 3rd of the necessary interaction types.
+    Flower: The flower is a startionary piece that doesn't interact with the player. It has the interaction type of none which covers one of the interaction types so it does nothing.
+    Goblin: The goblin is the piece that has random movement requirements in which is either moves left or right by one which is a random type that is selected in the class. It has a interaction type of 1 where it doesn't interact on the same space but instead when the player is one ahead or behind. This covers the hitt type along with the second movement piece in which it utilzies a random algorithm.
+    Trap: The trap is the last piece that interacts when the user is on the space. It is stationary and implements the hit interaction type.
+    Wizard: The wizard is the piece that interacts at a distance and it uses a random chance to kill the user. THis implemenets the kill interation type and the wizard is stationary.
+
+
+    Through all of the above pieces all of the requirements:
+    
+Only Drawable:
+Flower
+
+Moveable GamePieces:
+Boulder (linear)
+Goblin (random)
+
+Non-moveable GamePieces:
+Chest (GetPoint)
+Door (Advance)
+Trap (Hit)
+Wizard (Kill, distance)
