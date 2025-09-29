@@ -1,5 +1,5 @@
 	@Test
-	public void Goblin(){}
+	public void Goblin(){
 		// Each test will create its own gameBoard
 		Drawable [] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
 		// Start with 1, leaves 0 open

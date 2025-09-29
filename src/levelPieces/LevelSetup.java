@@ -1,11 +1,11 @@
 package levelPieces;
 
 import gameEngine.Drawable;
-import java.util.ArrayList;
 import gameEngine.Moveable;
+import java.util.ArrayList;
 
 public class LevelSetup {
-    mo
+    
     Drawable[] board;
     ArrayList<Moveable> movingPieces; 
     ArrayList<GamePiece> interactingPieces;
