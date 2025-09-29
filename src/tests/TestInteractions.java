@@ -1,7 +1,9 @@
 package tests;
+package utilities
 import static org.junit.Assert.*;
 import org.junit.Test;
 import utilities.Trap;
+
 
 public class TestInteractions {
 @Test
@@ -12,11 +14,11 @@ public void testTrap(){
     
     assertEquals(InteractionResult.HIT, trap.interact(gameBoard, 5));
 
-    for(int i=0; i<10; i++){
+    for(int i=0; i<5; i++){
         assertEquals(InteractionResult.NONE, trap.InteractionResult(gameBoard, i));
     }
     
-    for(int i=11; i<GameEngine.BOARD_SIZE; i++){
+    for(int i=6; i<GameEngine.BOARD_SIZE; i++){
         assertEquals(InteractionResult.NONE, trap.InteractionResult(gameBoard, i));
     }
 }
