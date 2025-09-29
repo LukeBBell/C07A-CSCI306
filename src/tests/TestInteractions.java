@@ -7,8 +7,8 @@ import utilities.;
 @test
 public void testTrap(){
     Drawable[] gameBoard = new Drawable[Game.Engine.BOARD_SIZE];
-    trap boulder = new trap(5);
-    gameBoard[5] = boulder;
+    trap= new trap(5);
+    gameBoard[5] = trap;
     
     assertEquals(InteractionResult.HIT, trap.interact(gameBoard, i));
 
