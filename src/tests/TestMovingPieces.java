@@ -8,7 +8,7 @@ import levelPieces.goblin;
 import levelPieces.boulder;
 import levelPieces.flower;
 
-	public class TestMovingPieces() {
+	public class TestMovingPieces {
 		@Test
 		public void testGoblinRandomMovement() {
 			Drawable[] gameBoard = new Drawable[10]; // we dont need a big board
