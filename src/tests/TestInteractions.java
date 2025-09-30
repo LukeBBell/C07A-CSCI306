@@ -25,7 +25,7 @@ public void testTrap(){
 @Test
 public void testChest(){
     Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
-    Chest chest= new chest(5);
+    Chest chest= new Chest(5);
     gameBoard[5] = chest;
     
     assertEquals(InteractionResult.GET_POINT, trap.interact(gameBoard, 5));
