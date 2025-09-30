@@ -1,40 +1,52 @@
-	@Test
-	public void Goblin(){
-		// Each test will create its own gameBoard
-		Drawable [] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
-		// Start with 1, leaves 0 open
-		for (int i=1;i<=5; i++)
-			gameBoard[i] = new Goblin();
-		// Leave 6 open
-		for (int i=7; i<=11; i++)
-			gameBoard[i] = new Goblin();
-		// Leave 12, 13 and 20 open, assume player in 13
-		for (int i=14; i<20; i++)
-			gameBoard[i] = new Goblin();
-		// Place Sniper in an open space - 6
-		// Note that Sniper location will be updated via move method, 
-		// so occasionally location 6 will be open and may be chosen
-		Goblin goblin = new Goblin(6);
-		gameBoard[6] = goblin;
-		int count0 = 0;
-		int count6 = 0;
-		int count12 = 0;
-		int count20 = 0;
-		for (int i=0; i<200; i++) {
-			goblin.move(Gameboard, 13);
-			int loc = goblin.getLocation();
-			// ensure no other space is chosen
-			if (loc != 0 && loc != 6 && loc != 12 && loc != 20)
-				fail("Invalid square selected");
-			// counters to ensure every valid option is chosen
-			if (loc == 0) count0++;
-			if (loc == 6) count6++;
-			if (loc == 12) count12++;
-			if (loc == 20) count20++;
-		}
-		// Ensure each option is randomly chosen some number of times. 
-		assert(count0 > 1);
-		assert(count6 > 1);
-		assert(count12 > 1);
-		assert(count20 > 1);		
+package tests;
+import static org.junit.Assert.*;   // for assertEquals, assertTrue, assertNull, etc.
+import org.junit.Test;              // for @Test annotation
+
+import gameEngine.Drawable;
+import gameEngine.InteractionResult;
+
+import levelPieces.goblin;
+import levelPieces.boulder;
+
+	public class TestMovingPieces() {
+		@Test
+		public void testRandomMovement() {
+			Drawable[] gameBoard = new Drawable[10]; // we dont need a big board
+
+			// Place Goblin in the middle
+			goblin g = new goblin(5);
+			gameBoard[5] = g;
+
+			int countLeft = 0;
+			int countRight = 0;
+			int initialLoc = g.getLocation();
+
+			// Run many trials to sample randomness
+			for (int i = 0; i < 200; i++) {
+				g.move(gameBoard, -1); // player location irrelevant here
+				int newLoc = g.getLocation();
+
+				// Ensure only valid moves: stay at 4 or 6 (or back at 5 if blocked)
+				assertTrue("Goblin moved to invalid spot: " + newLoc,
+						newLoc == initialLoc - 1 || newLoc == initialLoc + 1 || newLoc == initialLoc);
+
+				if (newLoc == initialLoc - 1) {
+					countLeft++;
+					// reset for next iteration
+					gameBoard[newLoc] = null;
+					g.setLocation(initialLoc);
+					gameBoard[initialLoc] = g;
+				} else if (newLoc == initialLoc + 1) {
+					countRight++;
+					// reset for next iteration
+					gameBoard[newLoc] = null;
+					g.setLocation(initialLoc);
+					gameBoard[initialLoc] = g;
+				}
+			}
+
+			// Ensure both directions occurred
+			assertTrue("Goblin never moved left", countLeft > 0);
+			assertTrue("Goblin never moved right", countRight > 0);
+		}	
 	}
