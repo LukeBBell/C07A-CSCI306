@@ -1,5 +1,4 @@
 package tests;
-package utilities
 import static org.junit.Assert.*;
 import org.junit.Test;
 import utilities.Trap;
@@ -23,6 +22,7 @@ public void testTrap(){
     }
 }
 
+@Test
 public void testChest(){
     Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
     Chest chest= new chest(5);
@@ -39,6 +39,7 @@ public void testChest(){
     }
 }
 
+@Test
 public void testDoor(){
     Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
     Door door= new Door(5);
@@ -55,6 +56,7 @@ public void testDoor(){
     }
 }
 
+@Test
 public void test(){
     Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
     Trap trap= new Trap(5);
@@ -71,6 +73,7 @@ public void test(){
     }
 }
 
+@Test
 public void testFlower(){
     Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
     Flower flower= new Flower(5);
@@ -87,6 +90,7 @@ public void testFlower(){
     }
 }
 
+@Test
 public void testGoblin(){
     Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
     Goblin goblin= new Goblin(5);
@@ -103,6 +107,7 @@ public void testGoblin(){
     }
 }
 
+@Test
 public void testWizard(){
     Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
     Wizard wizard= new Wizard(5);
@@ -119,6 +124,7 @@ public void testWizard(){
     }
 }
 
+@Test
 public void testBoulder(){
     Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
     Boulder boulder= new Boulder(5);
